@@ -22,7 +22,7 @@
 
 import telebot
 from config import keys, TOKEN
-from utils import APIException, CryptoConverter
+from extensions import APIException, CryptoConverter
 
 
 bot = telebot.TeleBot(TOKEN)
@@ -40,7 +40,7 @@ bot = telebot.TeleBot(TOKEN)
 def help(message: telebot.types.Message):
     text = 'Чтобы начать работу введите команду боту в следующием формате: \n<имя валюты> \
 <в какую валюту перевести> \
-<количество переводимой валюты> \n \
+<количество переводимой валюты> \n  Пример: доллар евро 1 \n \
 Увидеть список всех доступных валют: /values'
     bot.reply_to(message, text)
 
